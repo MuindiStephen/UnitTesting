@@ -7,11 +7,13 @@ import org.junit.Test
 class ValidatorTest {
     @Test
     fun `validates email if in correct pattern` () {
-        assertThat(Validator.validateEmail("stephenmuindi241@gmail.com")).isTrue()
+        val result = Validator.validateEmail("stephenmuindi241@gmail.com")
+        assertThat(result).isTrue()
     }
 
     @Test
     fun `validates email pattern is not correct` () {
-        assertThat(Validator.validateEmail("@gmail.com")).isFalse()
+        val result = Validator.validateEmail("@gmail.com")
+        assertThat(result).isFalse()
     }
 }

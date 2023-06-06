@@ -13,6 +13,10 @@ import org.mockito.Mock
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
+/** @APIServiceTest
+ * Unit Testing remote api service
+ */
 class ApiServiceTest {
     @Mock
     lateinit var mockWebServer: MockWebServer
