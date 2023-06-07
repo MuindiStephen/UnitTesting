@@ -11,7 +11,9 @@ object Validator {
     private var matcher: Matcher? = null
 
     fun validateEmail(hex: String?): Boolean {
-        matcher = pattern.matcher(hex)
+        matcher = hex?.let { string ->
+            pattern.matcher(string)
+        }
         return matcher!!.matches()
     }
 

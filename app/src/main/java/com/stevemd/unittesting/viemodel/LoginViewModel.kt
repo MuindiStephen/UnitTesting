@@ -1,4 +1,4 @@
-package com.stevemd.unittesting.viewmodel
+package com.stevemd.unittesting.viemodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -26,9 +26,7 @@ class LoginViewModel(
             setLoadingState(true)
 
             viewModelScope.launch {
-                loginRepo.validateLoginDetails(username,pass).let {
-                    onResponseReceived(it)
-                }
+                onResponseReceived(loginRepo.validateLoginDetails(username,pass))
             }
         }
 

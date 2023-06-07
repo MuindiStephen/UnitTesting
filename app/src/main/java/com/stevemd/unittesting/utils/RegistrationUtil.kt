@@ -3,7 +3,7 @@ package com.stevemd.unittesting.utils
 object RegistrationUtil {
 
     // Register User
-    private val existingUsers = listOf("Stephen", "Faith", "Yusuf", "Sayia")
+    private val existingUsers = listOf("Stephen", "Faith", "Yusuf", "Felix")
     fun validRegistrationInput(
         userName: String,
         password: String,

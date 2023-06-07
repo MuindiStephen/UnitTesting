@@ -38,6 +38,7 @@ class ApiServiceTest {
     @After
     fun deconstruct() {
         mockWebServer.shutdown()
+        mockWebServer.close()
     }
 
     @Test
