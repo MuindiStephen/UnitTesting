@@ -18,6 +18,22 @@
 ![repoTest](https://github.com/MuindiStephen/UnitTesting/assets/57146128/1ec97af4-b43f-496b-a304-7acc147b1cf4)
 
 
+## Tech stack
+- [Kotlin](https://kotlinlang.org/) - Kotlin is a cross-platform, statically typed, general-purpose high-level programming language with type inference.
+- [MVVM]() - Model View ViewModel a structural principle that separates the business login and data layer from the UI or the view
+
+### Testing stack
+  - [Espresso](https://developer.android.com/training/testing/espresso) - Use Espresso to write concise, beautiful, and reliable Android UI tests.
+  - [Mockito](https://github.com/mockito/mockito) - Mockito is a popular open source framework for mocking objects in software test.
+  - [Hamcrest](http://hamcrest.org/JavaHamcrest/) - A framework that assists writing software tests in the Java programming language. It supports creating customized assertion matchers
+  - [Google Truth Library](https://github.com/google/truth) - Truth makes your test assertions and failure messages more readable.
+  - [Junit](https://junit.org/junit4/) - JUnit is a unit testing framework for the Java programming language.
+  - [MockWebServer](https://github.com/square/okhttp/tree/master/mockwebserver) - Testing API endpoints 
+  - [Retrofit](https://square.github.io/retrofit/) - type safe http client with coroutines support
+  - [Gson](https://github.com/google/gson) - A Java serialization/deserialization library to convert Java Objects into JSON and back
+  - [okhttp-logging-interceptor](https://github.com/square/okhttp/blob/master/okhttp-logging-interceptor/README.md) - logging HTTP request related data.
+  - [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library Support for coroutines
+
 
 
 
