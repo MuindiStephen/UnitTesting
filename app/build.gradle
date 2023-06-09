@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -61,4 +62,17 @@ dependencies {
     // Test helpers for LiveData
     testImplementation "androidx.arch.core:core-testing:2.2.0"
     androidTestImplementation "androidx.arch.core:core-testing:2.2.0"
+
+    // Testing
+    def room_version = "2.5.1"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    testImplementation 'androidx.room:room-testing:2.5.1'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:core-ktx:1.5.0'
 }
