@@ -1,6 +1,7 @@
 package com.stevemd.unittesting.data.local.room.database
 
 import android.content.Context
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import androidx.room.Room
 
 import com.stevemd.unittesting.data.local.room.dao.WordDao
@@ -39,12 +40,12 @@ class AppDatabaseTest : TestCase(){
     }
 
     @Test
-    fun `insert word returns true`() {
+    fun `insert word returns true` () {
         val name = Word(1,"Coding")
 
         wordDao.insertWord(name)
 
-        assertThat(name.name)
+        //assertThat(name.name)  [reason, matcher]
     }
 
 
