@@ -9,6 +9,8 @@ import okhttp3.mockwebserver.MockWebServer
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
 import org.mockito.Mock
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -17,29 +19,38 @@ import retrofit2.converter.gson.GsonConverterFactory
 /** @APIServiceTest
  * Unit Testing remote api service
  */
+@RunWith(JUnit4::class)
 class ApiServiceTest {
     @Mock
-    lateinit var mockWebServer: MockWebServer
+    var mockWebServer: MockWebServer = MockWebServer()
     @Mock
     lateinit var apiService: ApiService
     lateinit var gson: Gson
 
     @Before
     fun setup() {
+        mockWebServer.start()
+
         gson = GsonBuilder().create()
         mockWebServer = MockWebServer()
         apiService = Retrofit.Builder()
-            .baseUrl(mockWebServer.url("http://test.com/path"))
+            .baseUrl(mockWebServer.url("/"))
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(ApiService::class.java)
     }
 
     @After
+    fun teardown() {
+        mockWebServer.close()
+    }
+
+    /**
+    @After
     fun deconstruct() {
         mockWebServer.shutdown()
         mockWebServer.close()
-    }
+    }*/
 
     @Test
     fun validateUserData_return_success() {
