@@ -29,7 +29,7 @@ class ApiServiceTest {
         gson = GsonBuilder().create()
         mockWebServer = MockWebServer()
         apiService = Retrofit.Builder()
-            .baseUrl(mockWebServer.url("/"))
+            .baseUrl(mockWebServer.url("http://test.com/path"))
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(ApiService::class.java)
